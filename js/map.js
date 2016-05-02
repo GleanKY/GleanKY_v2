@@ -18,7 +18,7 @@ function setColor(type) {
 	       type == 'GleanKY partner' ? "orange" :
 	       type == 'Neighborhood Ambassador' ? "magenta" :
 	       type == 'Gleaning Source' ? "green" : 
-	                     "white";
+	                     "purple";
 }
 
 function style(feature) {
