@@ -13,11 +13,10 @@ var sitePoints = null;
 //the last color without a type label is the color that anything with a type that isn't listed will be colored 
 function setColor(type) {
 	return type == 'GleanKy office' ? "purple" :
-	       type == 'Partner Recipient Site' ? "blue" : 
-	       type == 'Backpack Program' ? "yellow" :
-	       type == 'GleanKY partner' ? "orange" :
-	       type == 'Neighborhood Ambassador' ? "magenta" :
-	       type == 'Gleaning Source' ? "green" : 
+	       type == 'Partner Recipient Site' ? "#a6cee3" : 
+	       type == 'GleanKY partner' ? "#1f78b4" :
+	       type == 'Neighborhood Ambassador' ? "#b2df8a" :
+	       type == 'Gleaning Source' ? "#33a02c" : 
 	                     "white";
 }
 
@@ -110,8 +109,8 @@ legend.onAdd = function (map) {
     
     //type is the content of the Program Type field, labels is what you want the label on the legend to actually say
     //there need to be the same number of types as labels and listed in the same order
-    type = ['GleanKY office', 'Partner Recipient Site', 'Backpack Program', 'GleanKY partner', 'Neighborhood Ambassador', 'Gleaning Source'];
-    labels = ['GleanKY Office', 'Partner Recipient Site', 'Backpack Program', 'GleanKY Partner', 'Neighborhood Ambassador', 'Gleaning Source'];
+    type = ['GleanKY office', 'Partner Recipient Site', 'GleanKY partner', 'Neighborhood Ambassador', 'Gleaning Source'];
+    labels = ['GleanKY Office', 'Partner Recipient Site', 'GleanKY Partner', 'Neighborhood Ambassador', 'Gleaning Source'];
     
     for (var i = 0; i < type.length; i++) {
         div.innerHTML +=
