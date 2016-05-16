@@ -12,7 +12,7 @@ var sitePoints = null;
 //more Program Types can be added by following the pattern below
 //the last color without a type label is the color that anything with a type that isn't listed will be colored 
 function setColor(type) {
-	return type == 'GleanKy office' ? "black" :
+	return type == 'GleanKY office' ? "black" :
 	       type == 'Partner Recipient Site' ? "#a6cee3" : 
 	       type == 'GleanKY partner' ? "#1f78b4" :
 	       type == 'Neighborhood Ambassador' ? "#b2df8a" :
