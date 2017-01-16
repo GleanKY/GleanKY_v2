@@ -12,11 +12,11 @@ var sitePoints = null;
 //more Program Types can be added by following the pattern below
 //the last color without a type label is the color that anything with a type that isn't listed will be colored 
 function setColor(type) {
-	return type == 'GleanKY office' ? "black" :
-	       type == 'Partner Recipient Site' ? "#a6cee3" : 
-	       type == 'GleanKY partner' ? "#1f78b4" :
-	       type == 'Neighborhood Ambassador' ? "#b2df8a" :
-	       type == 'Gleaning Source' ? "#33a02c" : 
+	return type == 'Office' ? "black" :
+	       type == 'Recipient' ? "#a6cee3" : 
+	       // type == 'GleanKY partner' ? "#1f78b4" :
+	       // type == 'Neighborhood Ambassador' ? "#b2df8a" :
+	       type == 'Source' ? "#33a02c" : 
 	                     "white";
 }
 
@@ -61,13 +61,13 @@ $.getJSON("data/map.geojson",function(data){
         layer.bindPopup("<h2>"+props.organization+"</h2>"+
 		        "<dl>"+
 			        "<dt>"+"Address: "+"</dt><dd>"+props.address+"<br>"+ props.website+"</dd>"+
-			        "<dt>"+"Contact: "+"</dt><dd>"+props.contact+"<br>"+props.email+"<br>"+props.phone+"</dd>"+
-			        "<dt>"+"Hours of Operation: "+"</dt><dd>"+props.hours+"</dd>"+
-			        "<dt>"+"Storage Capacity: "+"</dt><dd>"+props.storage_cap+"</dd>"+
-			        "<dt>"+"Type of Program: "+"</dt><dd>"+props.program_type+"</dd>"+
-			        "<dt>"+"Food Education Offered: "+"</dt><dd>"+props.food_ed+"</dd>"+
-			        "<dt>"+"Regular Gleaning Donation: "+"</dt><dd>"+props.reg_donation+"</dd>"+
-			        "<dt>"+"Produce Restrictions: "+"</dt><dd>"+props.produce_restrictions + "</dd>"+
+			        // "<dt>"+"Contact: "+"</dt><dd>"+props.contact+"<br>"+props.email+"<br>"+props.phone+"</dd>"+
+			        // "<dt>"+"Hours of Operation: "+"</dt><dd>"+props.hours+"</dd>"+
+			        // "<dt>"+"Storage Capacity: "+"</dt><dd>"+props.storage_cap+"</dd>"+
+			        // "<dt>"+"Type of Program: "+"</dt><dd>"+props.program_type+"</dd>"+
+			        // "<dt>"+"Food Education Offered: "+"</dt><dd>"+props.food_ed+"</dd>"+
+			        // "<dt>"+"Regular Gleaning Donation: "+"</dt><dd>"+props.reg_donation+"</dd>"+
+			        // "<dt>"+"Produce Restrictions: "+"</dt><dd>"+props.produce_restrictions + "</dd>"+
 		        "</dl>");
 	
 	    layer.on({
@@ -109,8 +109,8 @@ legend.onAdd = function (map) {
     
     //type is the content of the Program Type field, labels is what you want the label on the legend to actually say
     //there need to be the same number of types as labels and listed in the same order
-    type = ['GleanKY office', 'Partner Recipient Site', 'GleanKY partner', 'Neighborhood Ambassador', 'Gleaning Source'];
-    labels = ['GleanKY Office', 'Partner Recipient Site', 'GleanKY Partner', 'Neighborhood Ambassador', 'Gleaning Source'];
+    type = ['Office', 'Recipient', 'Source'];
+    labels = ['GleanKY Office', 'Gleaning Recipient', 'Gleaning Source'];
     
     for (var i = 0; i < type.length; i++) {
         div.innerHTML +=
