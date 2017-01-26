@@ -60,7 +60,8 @@ $.getJSON("data/map.geojson",function(data){
         
         layer.bindPopup("<h2>"+props.organization+"</h2>"+
 		        "<dl>"+
-			        +props.address+"<br>"+ props.website+
+			props.address+"<br>"+props.city+", "+props.state+" "+props.zipcode+        
+		
 			        // "<dt>"+"Contact: "+"</dt><dd>"+props.contact+"<br>"+props.email+"<br>"+props.phone+"</dd>"+
 			        // "<dt>"+"Hours of Operation: "+"</dt><dd>"+props.hours+"</dd>"+
 			        // "<dt>"+"Storage Capacity: "+"</dt><dd>"+props.storage_cap+"</dd>"+
